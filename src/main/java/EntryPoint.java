@@ -15,10 +15,10 @@ public class EntryPoint {
             int Team1 = 0;
             int Team2 = 0;
             for (Map.Entry<String, PlayersStatistics> entry : playerdata.entrySet()) {
-                String[] split = entry.getKey().split("-");
-                if (split[0].equals("team1")) {
+                String[] strings = entry.getKey().split("-");
+                if (strings[0].equals("team1")) {
                     Team1 = Team1 + entry.getValue().getTotalNoOfKillInGame();
-                } else if (split[0].equals("team2")) {
+                } else if (strings[0].equals("team2")) {
                     Team2 += entry.getValue().getTotalNoOfKillInGame();
                 }
             }
