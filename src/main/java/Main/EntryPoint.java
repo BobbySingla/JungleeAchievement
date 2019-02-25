@@ -1,8 +1,15 @@
-import java.util.Map;
-import java.util.TreeMap;
+package Main;
+
+import Achievements.*;
+import GenerateDataa.GenerateData;
+import GenerateDataa.PlayersStatistics;
+
+import java.util.*;
+
+import static java.lang.String.join;
 
 public class EntryPoint {
-    static TreeMap<String, PlayersStatistics> playerdata;
+static TreeMap<String, PlayersStatistics> playerdata;
 
     public static void main(String[] args) {
         EntryPoint entryPoint = new EntryPoint();
@@ -31,6 +38,3 @@ public class EntryPoint {
         return "Both teams have equal no. of kills";
     }
 }
-
-
-
