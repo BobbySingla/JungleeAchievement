@@ -4,7 +4,7 @@ import java.util.TreeMap;
 public class GenerateData {
     TreeMap<String, PlayersStatistics> playerdata = new TreeMap<String, PlayersStatistics>();
 
-    TreeMap<String, PlayersStatistics> teamandPlayerdata() {
+   public TreeMap<String, PlayersStatistics> teamandPlayerdata() {
         for (int i = 0; i < 3; i++) {
             playerdata.put("Team1-" + "Player" + (i + 1), generateData());
         }
