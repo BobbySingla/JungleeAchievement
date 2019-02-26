@@ -14,7 +14,7 @@ public class Vetran implements Awards {
 
     @Override
     public String toString() {
-        return "Veteran ";
+        return "VETRAN ";
     }
 }
 

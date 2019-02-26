@@ -11,6 +11,6 @@ public class SharpShooter implements Awards {
 
     @Override
     public String toString() {
-        return "Sharp Shooter";
+        return "SHAR-SHOOTER";
     }
 }

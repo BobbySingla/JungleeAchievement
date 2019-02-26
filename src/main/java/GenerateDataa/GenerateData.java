@@ -33,7 +33,7 @@ public class GenerateData {
         int totalNoOfKill = random.nextInt(totalNoOfKillInGame + min) + 50;
         int totalGamesWinned = random.nextInt(totalNoOfGamesPlayed + min);
         System.out.println(totalNoOfAttemptedAttacks + "  " + totalNoOfHits
-                + " " + totalAmountDamageDone + "          " + totalNoOfKillInGame + "        " +
+                + " " + totalAmountDamageDone + "   " + totalNoOfKillInGame + "   " +
                 noOfFirstHitKills + " " + noOfAssists + " " + noOfSpellCast + " " +
                 totalSpellCastDamageDone + " " + totalTimePlayed + " " + totalNoOfGamesPlayed + " " +
                 totalDurationOfGamesPlayed + " " + totalNoOfKill + " " + totalGamesWinned);

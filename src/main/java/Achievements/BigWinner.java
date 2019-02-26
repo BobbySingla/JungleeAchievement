@@ -4,7 +4,6 @@ import GenerateDataa.PlayersStatistics;
 
 public class BigWinner implements Awards {
 
-
     @Override
     public boolean validate(PlayersStatistics playersStatistics) {
         return playersStatistics.getTotalGamesWinned() > 200;
@@ -12,6 +11,6 @@ public class BigWinner implements Awards {
 
     @Override
     public String toString() {
-        return " Big Winner";
+        return " BIG WINNER";
     }
 }

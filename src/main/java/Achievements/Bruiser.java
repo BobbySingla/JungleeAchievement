@@ -12,6 +12,6 @@ public class Bruiser implements Awards {
 
     @Override
     public String toString() {
-        return "Bruiser";
+        return "BRUSIER";
     }
 }

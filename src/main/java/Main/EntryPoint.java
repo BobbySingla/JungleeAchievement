@@ -1,9 +1,6 @@
 package Main;
 
-import Achievements.BigWinner;
-import Achievements.Bruiser;
-import Achievements.SharpShooter;
-import Achievements.Vetran;
+import Achievements.*;
 import GenerateDataa.GenerateData;
 import GenerateDataa.PlayersStatistics;
 
@@ -20,6 +17,11 @@ public class EntryPoint {
         EntryPoint entryPoint = new EntryPoint();
         playerdata = new GenerateData().teamandPlayerdata();
         System.out.println("Winner is : " + entryPoint.winner(playerdata));
+
+
+        AwardsAllocation awardsAllocation=new AwardsAllocation();
+        entryPoint.showAchievements();
+
     }
 
     public List awardsList() {
@@ -28,6 +30,12 @@ public class EntryPoint {
         awards.add(new Vetran());
         awards.add(new BigWinner());
         return awards;
+    }
+
+    public void showAchievements() {
+        System.out.format("---------------------------------------------------------------\n");
+        System.out.format("| Team- Players  |             Awards                         |\n");
+        System.out.format("---------------------------------------------------------------\n");
     }
 
     public String winner(TreeMap<String, PlayersStatistics> playerdata) {
@@ -42,7 +50,7 @@ public class EntryPoint {
                     Team2 += entry.getValue().getTotalNoOfKillInGame();
                 }
             }
-            if (Team1>Team2) {
+            if (Team1 > Team2) {
                 return "Team 1 Wins";
             } else {
                 return "Team 2 Wins";
