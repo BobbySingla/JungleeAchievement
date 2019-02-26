@@ -40,7 +40,7 @@ public class GenerateData {
 
 
 
-        System.out.println(totalNoOfAttemptedAttacks + "    " + totalNoOfHits
+        System.out.println(totalNoOfAttemptedAttacks + "  " + totalNoOfHits
                 + " " + totalAmountDamageDone + " " + totalNoOfKillInGame + " " +
                 noOfFirstHitKills + " " + noOfAssists + " " + noOfSpellCast + " " +
                 totalSpellCastDamageDone + " " + totalTimePlayed + " " + totalNoOfGamesPlayed + " " +
