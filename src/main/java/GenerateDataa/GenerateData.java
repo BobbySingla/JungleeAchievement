@@ -17,35 +17,27 @@ public class GenerateData {
     }
 
     PlayersStatistics generateData() {
-        int min=1;
+        int min = 1;
         Random random = new Random();
-        int totalNoOfAttemptedAttacks = random.nextInt(50+min);
-        int totalNoOfHits = random.nextInt(totalNoOfAttemptedAttacks+min);
-        int totalAmountDamageDone = random.nextInt(1000+min);
-        int totalNoOfKillInGame = random.nextInt(totalNoOfHits+min);
-        int noOfFirstHitKills = random.nextInt(totalNoOfHits+min);
-        int noOfAssists = random.nextInt(totalNoOfHits+min);
-        int noOfSpellCast = random.nextInt(10+min);
-        int totalSpellCastDamageDone = random.nextInt(15+min);
-        int totalTimePlayed = random.nextInt(300+min);
-        int totalNoOfGamesPlayed = random.nextInt(1500+min);
-        int totalDurationOfGamesPlayed = random.nextInt(totalTimePlayed+min);
-        int totalNoOfKill = random.nextInt(totalNoOfKillInGame+min) + 50;
-        int totalGamesWinned = random.nextInt(totalNoOfGamesPlayed+min);
-
-
-
-
-
-
-
-
+        int totalNoOfAttemptedAttacks = random.nextInt(50 + min);
+        int totalNoOfHits = random.nextInt(totalNoOfAttemptedAttacks + min);
+        int totalAmountDamageDone = random.nextInt(1000 + min);
+        int totalNoOfKillInGame = random.nextInt(totalNoOfHits + min);
+        int noOfFirstHitKills = random.nextInt(totalNoOfHits + min);
+        int noOfAssists = random.nextInt(totalNoOfHits + min);
+        int noOfSpellCast = random.nextInt(10 + min);
+        int totalSpellCastDamageDone = random.nextInt(15 + min);
+        int totalTimePlayed = random.nextInt(300 + min);
+        int totalNoOfGamesPlayed = random.nextInt(1500 + min);
+        int totalDurationOfGamesPlayed = random.nextInt(totalTimePlayed + min);
+        int totalNoOfKill = random.nextInt(totalNoOfKillInGame + min) + 50;
+        int totalGamesWinned = random.nextInt(totalNoOfGamesPlayed + min);
         System.out.println(totalNoOfAttemptedAttacks + "  " + totalNoOfHits
-                + " " + totalAmountDamageDone + " " + totalNoOfKillInGame + " " +
+                + " " + totalAmountDamageDone + "          " + totalNoOfKillInGame + "        " +
                 noOfFirstHitKills + " " + noOfAssists + " " + noOfSpellCast + " " +
                 totalSpellCastDamageDone + " " + totalTimePlayed + " " + totalNoOfGamesPlayed + " " +
                 totalDurationOfGamesPlayed + " " + totalNoOfKill + " " + totalGamesWinned);
-        return new PlayersStatistics.Builder()
+        return new PlayersStatistics.PlayersStatisticsBuilder()
                 .totalNoOfAttemptedAttacks(totalNoOfAttemptedAttacks)
                 .totalNoOfHits(totalNoOfHits)
                 .totalAmountDamageDone(totalAmountDamageDone)

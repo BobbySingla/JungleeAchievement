@@ -1,81 +1,25 @@
 package GenerateDataa;
 
-import lombok.*;
-import lombok.experimental.SuperBuilder;
+import lombok.Builder;
+import lombok.Data;
 
-import java.util.Set;
 
-@Data
-//@AllArgsConstructor
 @Builder
+@Data
 public class PlayersStatistics {
-
-
-    public int getTotalNoOfAttemptedAttacks() {
-        return totalNoOfAttemptedAttacks;
-    }
-
-    public int getTotalNoOfHits() {
-        return totalNoOfHits;
-    }
-
-    public int getTotalAmountDamageDone() {
-        return totalAmountDamageDone;
-    }
-
-    public int getTotalNoOfKillInGame() {
-        return totalNoOfKillInGame;
-    }
-
-    public int getNoOfFirstHitKills() {
-        return noOfFirstHitKills;
-    }
-
-    public int getNoOfAssists() {
-        return noOfAssists;
-    }
-
-    public int getNoOfSpellCast() {
-        return noOfSpellCast;
-    }
-
-    public int getTotalSpellCastDamageDone() {
-        return totalSpellCastDamageDone;
-    }
-
-    public int getTotalTimePlayed() {
-        return totalTimePlayed;
-    }
-
-    public int getTotalNoOfGamesPlayed() {
-        return totalNoOfGamesPlayed;
-    }
-
-    public int getTotalDurationOfGamesPlayed() {
-        return totalDurationOfGamesPlayed;
-    }
-
-    public int getTotalNoOfKill() {
-        return totalNoOfKill;
-    }
-
-    public int getTotalGamesWinned() {
-        return totalGamesWinned;
-    }
-
-    int totalNoOfAttemptedAttacks;
-    int totalNoOfHits;
-    int totalAmountDamageDone;
-    int totalNoOfKillInGame;
-    int noOfFirstHitKills;
-    int noOfAssists;
-    int noOfSpellCast;
-    int totalSpellCastDamageDone;
-    int totalTimePlayed;
-    int totalNoOfGamesPlayed;
-    int totalDurationOfGamesPlayed;
-    int totalNoOfKill;
-    int totalGamesWinned;
+    private int totalNoOfAttemptedAttacks;
+    private int totalNoOfHits;
+    private int totalAmountDamageDone;
+    private int totalNoOfKillInGame;
+    private int noOfFirstHitKills;
+    private int noOfAssists;
+    private int noOfSpellCast;
+    private int totalSpellCastDamageDone;
+    private int totalTimePlayed;
+    private int totalNoOfGamesPlayed;
+    private int totalDurationOfGamesPlayed;
+    private int totalNoOfKill;
+    private int totalGamesWinned;
 }
 
 
