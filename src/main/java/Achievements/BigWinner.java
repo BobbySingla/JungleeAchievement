@@ -11,6 +11,6 @@ public class BigWinner implements Awards {
 
     @Override
     public String toString() {
-        return " BIG WINNER";
+        return " BIG-WINNER";
     }
 }

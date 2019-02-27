@@ -4,10 +4,7 @@ import Achievements.*;
 import GenerateDataa.GenerateData;
 import GenerateDataa.PlayersStatistics;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-import java.util.TreeMap;
+import java.util.*;
 
 public class EntryPoint {
     static TreeMap<String, PlayersStatistics> playerdata;
@@ -17,26 +14,27 @@ public class EntryPoint {
         EntryPoint entryPoint = new EntryPoint();
         playerdata = new GenerateData().teamandPlayerdata();
         System.out.println("Winner is : " + entryPoint.winner(playerdata));
-
-
-        AwardsAllocation awardsAllocation=new AwardsAllocation();
-        entryPoint.showAchievements();
-
+        AwardsAllocation awardCeremony = new AwardsAllocation(getAwards());
+        Map<String, List<String>> playeraward = awardCeremony.awardscal(playerdata);
+        showAchievements(playeraward);
     }
 
-    public List awardsList() {
-        awards.add(new Bruiser());
-        awards.add(new SharpShooter());
-        awards.add(new Vetran());
-        awards.add(new BigWinner());
-        return awards;
+    public static List<Awards> getAwards() {
+        return Arrays.asList(
+                new SharpShooter(),
+                new Bruiser(),
+                new Vetran(),
+                new BigWinner());
     }
 
-    public void showAchievements() {
+    private static void showAchievements(final Map<String, List<String>> playerawards) {
         System.out.format("---------------------------------------------------------------\n");
         System.out.format("| Team- Players  |             Awards                         |\n");
         System.out.format("---------------------------------------------------------------\n");
+        playerawards.forEach((playerdata, awards) ->
+                System.out.println("  "+playerdata + "    " + awards));
     }
+
 
     public String winner(TreeMap<String, PlayersStatistics> playerdata) {
         if (!(playerdata.isEmpty())) {
