@@ -14,9 +14,8 @@ public class EntryPoint {
         EntryPoint entryPoint = new EntryPoint();
         playerdata = new GenerateData().teamandPlayerdata();
         System.out.println("Winner is : " + entryPoint.winner(playerdata));
-        AwardsAllocation awardCeremony = new AwardsAllocation(getAwards());
-        Map<String, List<String>> playeraward = awardCeremony.awardscal(playerdata);
-        showAchievements(playeraward);
+//        AwardsAllocation awardCeremony = new AwardsAllocation(getAwards());
+
     }
 
     public static List<Awards> getAwards() {
@@ -32,7 +31,6 @@ public class EntryPoint {
         playerawards.forEach((playerdata, awards) ->
                 System.out.println("  "+playerdata + "    " + awards));
     }
-
 
     public String winner(TreeMap<String, PlayersStatistics> playerdata) {
         if (!(playerdata.isEmpty())) {
