@@ -24,7 +24,8 @@ public class EntryPoint {
                 new SharpShooter(),
                 new Bruiser(),
                 new Vetran(),
-                new BigWinner());
+                new BigWinner(),
+        new FirstHitAward());
     }
 
     private static void showAchievements( Map<String, List<String>> playerawards) {
