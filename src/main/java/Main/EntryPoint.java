@@ -27,10 +27,7 @@ public class EntryPoint {
                 new BigWinner());
     }
 
-    private static void showAchievements(final Map<String, List<String>> playerawards) {
-        System.out.format("---------------------------------------------------------------\n");
-        System.out.format("| Team- Players  |             Awards                         |\n");
-        System.out.format("---------------------------------------------------------------\n");
+    private static void showAchievements( Map<String, List<String>> playerawards) {
         playerawards.forEach((playerdata, awards) ->
                 System.out.println("  "+playerdata + "    " + awards));
     }
