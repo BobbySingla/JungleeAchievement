@@ -2,7 +2,6 @@ package Achievements;
 
 import GenerateDataa.PlayersStatistics;
 
-
 public class FirstHitsKillsAward  implements Awards {
     @Override
     public boolean validate(PlayersStatistics playersStatistics) {
