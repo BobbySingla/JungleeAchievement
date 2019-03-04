@@ -1,4 +1,0 @@
-package Achievements;
-
-public enum GameAwards {    SHARPSHOOTERAWARD,BRUISERAWARD,VETERANAWARD,BIGWINNERAWARD;
-}

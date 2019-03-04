@@ -8,7 +8,7 @@ public class Vetran implements Awards {
     @Override
     public boolean validate(PlayersStatistics playersStatistics) {
 
-       return  (playersStatistics.getTotalNoOfGamesPlayed() > 1000);
+        return (playersStatistics.getTotalNoOfGamesPlayed() > 1000);
 
     }
 

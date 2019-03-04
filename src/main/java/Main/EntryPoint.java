@@ -3,35 +3,37 @@ package Main;
 import Achievements.*;
 import GenerateDataa.GenerateData;
 import GenerateDataa.PlayersStatistics;
+
 import java.util.*;
+
 public class EntryPoint {
     static TreeMap<String, PlayersStatistics> playerdata;
-        static List<Awards> awards=new ArrayList<>();
+    static List<Awards> awards = new ArrayList<>();
 
     public static void main(String[] args) {
         EntryPoint entryPoint = new EntryPoint();
         playerdata = new GenerateData().teamandPlayerdata();
         System.out.println("Winner is : " + entryPoint.winner(playerdata));
         System.out.println("Teams and Awards Data : ");
-        AwardsAllocation awardsAllocation=new AwardsAllocation(getawards());
-        Map<String,List<String>> playerAward= awardsAllocation.awardcal(playerdata);
+        AwardsAllocation awardsAllocation = new AwardsAllocation(getawards());
+        Map<String, List<String>> playerAward = awardsAllocation.awardcal(playerdata);
 
         entryPoint.show(playerAward);
     }
 
-private static void show( Map<String, List<String>> playerawards) {
+    private static void show(Map<String, List<String>> playerawards) {
         playerawards.forEach((player, awards) ->
-                System.out.println(player+ "   "+ awards));
+                System.out.println(player + "   " + awards));
     }
-    public static List getawards(){
-        return Arrays.asList(new SharpShooter(),new BigWinner()
-        ,new Vetran(),new Bruiser());
+
+    public static List getawards() {
+        return Arrays.asList(new SharpShooter(), new BigWinner()
+                , new Vetran(), new Bruiser());
     }
 
     public String winner(TreeMap<String, PlayersStatistics> playerdata) {
         if (!(playerdata.isEmpty())) {
-            int Team1 = 0;
-            int Team2 = 0;
+            int Team1 = 0, Team2 = 0;
             for (Map.Entry<String, PlayersStatistics> entry : playerdata.entrySet()) {
                 String[] strings = entry.getKey().split("-");
                 if (strings[0].equals("Team1")) {
