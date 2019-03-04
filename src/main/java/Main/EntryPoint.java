@@ -28,7 +28,7 @@ public class EntryPoint {
 
     public static List getawards() {
         return Arrays.asList(new SharpShooter(), new BigWinner()
-                , new Vetran(), new Bruiser());
+                , new Vetran(), new Bruiser(),new FirstHitsKillsAward());
     }
 
     public String winner(TreeMap<String, PlayersStatistics> playerdata) {
