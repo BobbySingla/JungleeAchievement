@@ -3,33 +3,29 @@ package Main;
 import Achievements.*;
 import GenerateDataa.GenerateData;
 import GenerateDataa.PlayersStatistics;
-
 import java.util.*;
-
 public class EntryPoint {
     static TreeMap<String, PlayersStatistics> playerdata;
-    List awards = new ArrayList();
+        static List<Awards> awards=new ArrayList<>();
 
     public static void main(String[] args) {
         EntryPoint entryPoint = new EntryPoint();
         playerdata = new GenerateData().teamandPlayerdata();
         System.out.println("Winner is : " + entryPoint.winner(playerdata));
-//        AwardsAllocation awardCeremony = new AwardsAllocation(getAwards());
+        System.out.println("Teams and Awards Data : ");
+        AwardsAllocation awardsAllocation=new AwardsAllocation(getawards());
+        Map<String,List<String>> playerAward= awardsAllocation.awardcal(playerdata);
 
+        entryPoint.show(playerAward);
     }
 
-    public static List<Awards> getAwards() {
-        return Arrays.asList(
-                new SharpShooter(),
-                new Bruiser(),
-                new Vetran(),
-                new BigWinner(),
-        new FirstHitAward());
+private static void show( Map<String, List<String>> playerawards) {
+        playerawards.forEach((player, awards) ->
+                System.out.println(player+ "   "+ awards));
     }
-
-    private static void showAchievements( Map<String, List<String>> playerawards) {
-        playerawards.forEach((playerdata, awards) ->
-                System.out.println("  "+playerdata + "    " + awards));
+    public static List getawards(){
+        return Arrays.asList(new SharpShooter(),new BigWinner()
+        ,new Vetran(),new Bruiser());
     }
 
     public String winner(TreeMap<String, PlayersStatistics> playerdata) {

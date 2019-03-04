@@ -20,6 +20,7 @@ public class PlayersStatistics {
     private int totalDurationOfGamesPlayed;
     private int totalNoOfKill;
     private int totalGamesWinned;
+
 }
 
 
