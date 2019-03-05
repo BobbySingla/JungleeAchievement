@@ -16,7 +16,7 @@ public class AwardsAllocation {
     }
 
     public Map<String, List<String>> awardcal(Map<String, PlayersStatistics> playerData) {
-//        playersStatisforEach((s, playersStatistics1) -> );
+
         playerData.forEach((s, playersStatistics) -> {
             List<String> awardsList = awards.stream()
                     .filter(awards1 -> awards1.validate(playersStatistics))

@@ -32,11 +32,11 @@ public class GenerateData {
         int totalDurationOfGamesPlayed = random.nextInt(totalTimePlayed + min);
         int totalNoOfKill = random.nextInt(totalNoOfKillInGame + min) + 50;
         int totalGamesWinned = random.nextInt(totalNoOfGamesPlayed + min);
-        System.out.println(totalNoOfAttemptedAttacks + "  " + totalNoOfHits
-                + " " + totalAmountDamageDone + "   " + totalNoOfKillInGame + "   " +
-                noOfFirstHitKills + " " + noOfAssists + " " + noOfSpellCast + " " +
-                totalSpellCastDamageDone + " " + totalTimePlayed + " " + totalNoOfGamesPlayed + " " +
-                totalDurationOfGamesPlayed + " " + totalNoOfKill + " " + totalGamesWinned);
+//        System.out.println(totalNoOfAttemptedAttacks + "  " + totalNoOfHits
+//                + " " + totalAmountDamageDone + "   " + totalNoOfKillInGame + "   " +
+//                noOfFirstHitKills + " " + noOfAssists + " " + noOfSpellCast + " " +
+//                totalSpellCastDamageDone + " " + totalTimePlayed + " " + totalNoOfGamesPlayed + " " +
+//                totalDurationOfGamesPlayed + " " + totalNoOfKill + " " + totalGamesWinned);
         return new PlayersStatistics.PlayersStatisticsBuilder()
                 .totalNoOfAttemptedAttacks(totalNoOfAttemptedAttacks)
                 .totalNoOfHits(totalNoOfHits)

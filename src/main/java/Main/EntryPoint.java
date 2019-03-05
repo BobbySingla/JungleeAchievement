@@ -17,18 +17,20 @@ public class EntryPoint {
         System.out.println("Teams and Awards Data : ");
         AwardsAllocation awardsAllocation = new AwardsAllocation(getawards());
         Map<String, List<String>> playerAward = awardsAllocation.awardcal(playerdata);
-
         entryPoint.show(playerAward);
     }
 
     private static void show(Map<String, List<String>> playerawards) {
+        System.out.printf("-------------------------------------------------------------------------------\n");
+        System.out.printf("|     Team      |                           Awards                             |\n");
+        System.out.printf("-------------------------------------------------------------------------------\n");
         playerawards.forEach((player, awards) ->
-                System.out.println(player + "   " + awards));
+                System.out.printf("| %12s | %-60s |\n",player, awards));
+        System.out.printf("-------------------------------------------------------------------------------\n");
     }
 
     public static List getawards() {
-        return Arrays.asList(new SharpShooter(), new BigWinner()
-                , new Vetran(), new Bruiser(),new FirstHitsKillsAward());
+        return Arrays.asList(new SharpShooter(), new BigWinner(), new Vetran(), new Bruiser(), new FirstHitsKillsAward());
     }
 
     public String winner(TreeMap<String, PlayersStatistics> playerdata) {
